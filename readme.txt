@@ -1,18 +1,18 @@
 === Plugin Name ===
-Contributors: anna-werner,conschneider
-Tags: WooCommerce,usp,singleproductpage
+Contributors: anna_werner,conschneider
+Tags: WooCommerce,usp,singleproductpage,product
 Requires at least: 4.0
 Tested up to: 4.7.4
-Stable tag: 1.2.3
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin lets you add up to five USPs underneath the add to cart button on single product pages. 
+This plugin lets you add up to five Unique Selling Propositions underneath the add to cart button on single product pages. 
 
 == Description ==
 
 Remind your customers why they should order your products right when they might need a push - on the single product page. With this plugin, you can 
-* insert up to 5 Unique Selling Propositions 
+* insert up to 5 Unique Selling Propositions (USP)
 * display them right underneath the „Add To Cart“ button on WooCommerce single product pages
 * choose a fitting icon for each USP 
 * color the icons so they fit your theme/design 
