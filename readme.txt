@@ -14,7 +14,7 @@ This plugin lets you add up to five Unique Selling Propositions underneath the a
 Remind your customers why they should order your products right when they might need a push - on the single product page. With this plugin, you can 
 * insert up to 5 Unique Selling Propositions (USP)
 * display them right underneath the „Add To Cart“ button on WooCommerce single product pages
-* choose a fitting icon for each USP 
+* choose a fitting icon from 4 different icon fonts for each USP 
 * color the icons so they fit your theme/design 
 
 == Installation ==
@@ -28,7 +28,7 @@ Remind your customers why they should order your products right when they might 
 
 = What icons can I choose? =
 
-Version 1.0 comes with font-awesome icons. In the future, there will be more icon fonts to choose from. 
+You can choose from four different Icon Fonts to find the icon and style you like: Dashicons, Font Awesome Icons, Linecons and Linearicons.
 
 = Can I use the USPs somewhere else? =
 
@@ -40,6 +40,9 @@ Not yet. But we plan to integrate a shortcake you can use anywhere on your websi
 2. Single Product Page USPs
 
 == Changelog ==
+
+= 1.1 =
+* adds 3 additional Icon Fonts to choose from: Dashicons, Font Awesom Icons, Linecons and Linearicons
 
 = 1.0 =
 * Initial version.
