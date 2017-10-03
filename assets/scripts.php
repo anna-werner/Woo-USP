@@ -27,6 +27,12 @@ function wcusp_icon_picker_scripts() {
 
     $fontawesome = plugin_dir_url( __FILE__ ) . 'fonts/font-awesome/css/font-awesome.css';
     wp_enqueue_style( 'font-awesome', $fontawesome );   
+
+    $linearicons = plugin_dir_url( __FILE__ ) . 'fonts/linearicons/style.css';
+    wp_enqueue_style( 'linearicons', $linearicons, '', '');
+
+    $linecons = plugin_dir_url( __FILE__ ) . 'fonts/linecons/style.css';
+    wp_enqueue_style( 'linecons', $linecons, '', '');
 }
 add_action( 'admin_enqueue_scripts', 'wcusp_icon_picker_scripts' );
 
@@ -37,6 +43,10 @@ function wcusp_frontend_icon_picker_scripts() {
     wp_enqueue_style( 'dashicons');
     $fontawesome = plugin_dir_url( __FILE__ ) . 'fonts/font-awesome/css/font-awesome.css';
     wp_enqueue_style( 'font-awesome', $fontawesome,'','');
+    $linearicons = plugin_dir_url( __FILE__ ) . 'fonts/linearicons/style.css';
+    wp_enqueue_style( 'linearicons', $linearicons,'','');
+    $linecons = plugin_dir_url( __FILE__ ) . 'fonts/linecons/style.css';
+    wp_enqueue_style( 'linecons', $linecons,'','');
 }
 add_action( 'wp_enqueue_scripts', 'wcusp_frontend_icon_picker_scripts' );
 
