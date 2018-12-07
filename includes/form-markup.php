@@ -1,6 +1,6 @@
 <?php
 
-function wcusp_add_content () {
+//function wcusp_add_content () {
 	
     //Include Options
     $wcusp_options = get_option('wcusp_settings');
@@ -82,9 +82,14 @@ function wcusp_add_content () {
         echo $my_fifth_usp;
     }
     echo $my_usps_end;
-}
+/*}
 
 add_action('woocommerce_single_product_summary', 'wcusp_add_content', 34);
 
+add_shortcode('woousp', 'wc_usp_shortcode');
+function wc_usp_shortcode(){
+    wcusp_add_content();
+}
 
+*/
 ?>

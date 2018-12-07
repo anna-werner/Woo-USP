@@ -5,7 +5,7 @@
 ******************************/
 
 function wcusp_load_scripts() {
-	if(is_singular()) {
+	if(! is_admin()) {
 		wp_enqueue_style('main-css', plugin_dir_url( __FILE__ ) . 'css/main.css');
 	}
 

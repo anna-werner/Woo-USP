@@ -2,8 +2,8 @@
 Contributors: anna_werner,conschneider
 Tags: WooCommerce,usp,singleproductpage,product
 Requires at least: 4.0
-Tested up to: 4.8.2
-Stable tag: 1.1
+Tested up to: 5.0
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,7 @@ Remind your customers why they should order your products right when they might 
 * display them right underneath the „Add To Cart“ button on WooCommerce single product pages
 * choose a fitting icon from 4 different icon fonts for each USP 
 * color the icons so they fit your theme/design 
+* show them on any page using a shortcode
 
 == Installation ==
 
@@ -30,9 +31,9 @@ Remind your customers why they should order your products right when they might 
 
 You can choose from four different Icon Fonts to find the icon and style you like: Dashicons, Font Awesome Icons, Linecons and Linearicons.
 
-= Can I use the USPs somewhere else? =
+= Can I show the USPs on other pages? =
 
-Not yet. But we plan to integrate a shortcake you can use anywhere on your website. 
+Yes, you can use the shortcode [woousp] to show the USPs on any page you wish to. It works with classic and Gutenberg editor. 
 
 == Screenshots ==
 
@@ -40,6 +41,10 @@ Not yet. But we plan to integrate a shortcake you can use anywhere on your websi
 2. Single Product Page USPs
 
 == Changelog ==
+
+= 2.0 =
+* adds the shortcode [woousp] to display the USP table anywhere
+* tested with Gutenberg shortcode block
 
 = 1.1 =
 * adds 3 additional Icon Fonts to choose from: Dashicons, Font Awesom Icons, Linecons and Linearicons
