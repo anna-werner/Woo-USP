@@ -967,8 +967,8 @@
         function createPopup($button) {
             $target = $($button.data('target'));
             $popup = $('<div class="icon-picker-container"> \
-						<div class="icon-picker-control" /> \
-						<ul class="icon-picker-list" /> \
+						<div class="icon-picker-control"></div> \
+						<div class="icon-picker-list-container"><ul class="icon-picker-list"></ul></div> \
 					</div>')
                 .css({
                     'top': $button.offset().top,
