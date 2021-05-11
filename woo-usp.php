@@ -3,7 +3,7 @@
  * Plugin Name: Woo USP
  * Plugin URI: #
  * Description: This plugin allows you to display up to five unique selling propositions in you WooCommerce store. Display them anywhere with the shortcode [woousp].
- * Version: 1.1.0
+ * Version: 2.1
  * Author: Anna Schneider
  * Author URI: https://www.annaschneider.me
  * License: GPL2
