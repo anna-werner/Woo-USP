@@ -3,7 +3,7 @@ Contributors: anna_werner,conschneider
 Tags: WooCommerce,usp,singleproductpage,product
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Yes, you can use the shortcode [woousp] to show the USPs on any page you wish to
 2. Single Product Page USPs
 
 == Changelog ==
+
+= 2.2 =
+* fixes problems with selection no icon
 
 = 2.1 =
 * fixes problems with the icon picker
