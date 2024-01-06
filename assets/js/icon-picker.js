@@ -956,87 +956,97 @@
         }
 
 
-        $button = $('.icon-picker');
-        $button.each(function() {
-            $(this).on('click.iconPicker', function() {
-                createPopup($(this));
-            });
-        });
+        // Attach event listener to the parent table
+        $('#wcusp_table').on('click', '.icon-picker', function() {
+            // Check if the clicked element is an .icon-picker
+            var $iconPicker = $(this);
+            if ($iconPicker.length) {
+                createPopup($iconPicker);
+            }
 
+            function createPopup($iconPicker) {
+                $target = $($iconPicker.data('target'));
+                $popup = $('<div class="icon-picker-container"> \
+                            <div class="icon-picker-control"></div> \
+                            <div class="icon-picker-list-container"><ul class="icon-picker-list"></ul></div> \
+                        </div>')
+                    .css({
+                        'top': $iconPicker.offset().top,
+                        'left': $iconPicker.offset().left
+                    });
+                build_list($popup, $iconPicker, 0);
+                var $control = $popup.find('.icon-picker-control');
+                $control.html('<p>Select Font: <select><option value="dashicons">Dashicons</option><option value="fa">Font Awesome</option><option value="li">Linecons</option><option value="lnr">Linearicons</option></select></p>' +
+                    '<a data-direction="back" href="#"><span class="dashicons dashicons-arrow-left-alt2"></span></a> ' +
+                    '<input type="text" class="" placeholder="Search" />' +
+                    '<a data-direction="forward" href="#"><span class="dashicons dashicons-arrow-right-alt2"></span></a>' +
+                    '');
 
-        function createPopup($button) {
-            $target = $($button.data('target'));
-            $popup = $('<div class="icon-picker-container"> \
-						<div class="icon-picker-control"></div> \
-						<div class="icon-picker-list-container"><ul class="icon-picker-list"></ul></div> \
-					</div>')
-                .css({
-                    'top': $button.offset().top,
-                    'left': $button.offset().left
+                $('select', $control).on('change', function(e) {
+                    e.preventDefault();
+                    if (this.value != options[0]) {
+                        options[0] = this.value;
+                        font_set();
+                        build_list($popup, $iconPicker, 1);
+                    };
                 });
-            build_list($popup, $button, 0);
-            var $control = $popup.find('.icon-picker-control');
-            $control.html('<p>Select Font: <select><option value="dashicons">Dashicons</option><option value="fa">Font Awesome</option><option value="li">Linecons</option><option value="lnr">Linearicons</option></select></p>' +
-                '<a data-direction="back" href="#"><span class="dashicons dashicons-arrow-left-alt2"></span></a> ' +
-                '<input type="text" class="" placeholder="Search" />' +
-                '<a data-direction="forward" href="#"><span class="dashicons dashicons-arrow-right-alt2"></span></a>' +
-                '');
 
-            $('select', $control).on('change', function(e) {
-                e.preventDefault();
-                if (this.value != options[0]) {
-                    options[0] = this.value;
-                    font_set();
-                    build_list($popup, $button, 1);
-                };
-            });
+                $('a', $control).click(function(e) {
+                    e.preventDefault();
+                    if ($(this).data('direction') === 'back') {
+                        //move last 25 elements to front
+                        $('li:gt(' + (icons.length - 26) + ')', $list).each(function() {
+                            $(this).prependTo($list);
+                        });
+                    } else {
+                        //move first 25 elements to the end
+                        $('li:lt(25)', $list).each(function() {
+                            $(this).appendTo($list);
+                        });
+                    }
+                });
 
-            $('a', $control).click(function(e) {
-                e.preventDefault();
-                if ($(this).data('direction') === 'back') {
-                    //move last 25 elements to front
-                    $('li:gt(' + (icons.length - 26) + ')', $list).each(function() {
-                        $(this).prependTo($list);
-                    });
-                } else {
-                    //move first 25 elements to the end
-                    $('li:lt(25)', $list).each(function() {
-                        $(this).appendTo($list);
-                    });
-                }
-            });
+                $popup.appendTo('body').show();
 
-            $popup.appendTo('body').show();
-
-            $('input', $control).on('keyup', function(e) {
-                var search = $(this).val();
-                if (search === '') {
-                    //show all again
-                    $('li:lt(25)', $list).show();
-                } else {
-                    $('li', $list).each(function() {
-                        if ($(this).data('icon').toString().toLowerCase().indexOf(search.toLowerCase()) !== -1) {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                }
-            });
+                $('input', $control).on('keyup', function(e) {
+                    var search = $(this).val();
+                    if (search === '') {
+                        //show all again
+                        $('li:lt(25)', $list).show();
+                    } else {
+                        $('li', $list).each(function() {
+                            if ($(this).data('icon').toString().toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    }
+                });
 
 
 
-            $(document).mouseup(function(e) {
-                if (!$popup.is(e.target) && $popup.has(e.target).length === 0) {
-                    removePopup();
-                }
-            });
-        }
+                $(document).mouseup(function(e) {
+                    if (!$popup.is(e.target) && $popup.has(e.target).length === 0) {
+                        removePopup();
+                    }
+                });
+            }
+            
+        });
     }
 
+    // Function to initialize icon picker
+    function initializeIconPicker(element) {
+        element.iconPicker();
+    }
+    window.initializeIconPicker = initializeIconPicker;
 
+    // Initialize icon picker for existing elements on page load
     $(function() {
-        $('.icon-picker').iconPicker();
+        $('.icon-picker').each(function() {
+            initializeIconPicker($(this));
+        });
     });
 
 }(jQuery));

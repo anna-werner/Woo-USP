@@ -29,7 +29,7 @@ div.product-usps-wrapper {
 
             .usp-title {
                 float: left;
-                width: 80%;
+                width: calc(80% - 20px);
             }
 
                 @media only screen and (max-width: 899px){

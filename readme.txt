@@ -1,60 +1,63 @@
 === Plugin Name ===
-Contributors: anna_werner,conschneider
-Tags: WooCommerce,usp,singleproductpage,product
+Contributors: anna_werner, conschneider
+Tags: WooCommerce, USP, single product page, product customization
 Requires at least: 4.0
-Tested up to: 5.7
-Stable tag: 2.2
+Tested up to: 6.4
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin lets you add up to five Unique Selling Propositions underneath the add to cart button on single product pages. 
+Enhance your WooCommerce single product pages by adding unlimited Unique Selling Propositions (USPs) and customizing them for individual products.
 
 == Description ==
 
-Remind your customers why they should order your products right when they might need a push - on the single product page. With this plugin, you can 
-* insert up to 5 Unique Selling Propositions (USP)
-* display them right underneath the „Add To Cart“ button on WooCommerce single product pages
-* choose a fitting icon from 4 different icon fonts for each USP 
-* color the icons so they fit your theme/design 
-* show them on any page using a shortcode
-
+Give your customers compelling reasons to complete their purchases right at the crucial moment – on the single product page. This plugin offers an intuitive way to:
+* Add unlimited Unique Selling Propositions (USPs) for your products.
+* Customize USPs for each individual product.
+* Display them prominently underneath the "Add To Cart" button on WooCommerce single product pages.
+* Select from a diverse range of icons across four different icon fonts for each USP.
+* Customize icon colors to match your site's theme and design aesthetic.
+* Showcase your USPs site-wide using the shortcode [woousp]. 
+ 
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->Woo USP screen to set your USPs and icons
-
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Configure your USPs and icons in the Settings->Woo USP screen.
 
 == Frequently Asked Questions ==
 
 = What icons can I choose? =
 
-You can choose from four different Icon Fonts to find the icon and style you like: Dashicons, Font Awesome Icons, Linecons and Linearicons.
+Select from four diverse icon fonts – Dashicons, Font Awesome Icons, Linecons, and Linearicons – to find the style that best suits your site.
 
-= Can I show the USPs on other pages? =
+= Can I show individual USPs per product? =
 
-Yes, you can use the shortcode [woousp] to show the USPs on any page you wish to. It works with classic and Gutenberg editor. 
+Yes! You can customize USPs for each individual product. Simply navigate to the product's edit screen and scroll down to the "Woo USP" section.
+
+= Can I display the USPs on other pages? =
+
+Absolutely! Use the shortcode [woousp] to place USPs on any page of your choice, compatible with both the classic and Gutenberg editors.
 
 == Screenshots ==
 
-1. Settings page
-2. Single Product Page USPs
+1. The Settings page where you can configure USPs.
+2. Example of USPs displayed on a Single Product Page.
 
 == Changelog ==
 
-= 2.2 =
-* fixes problems with selection no icon
+= 3.0 =
+* Added the ability to create an unlimited number of USPs.
+* Introduced functionality to customize USPs on a per-product basis.
 
 = 2.1 =
-* fixes problems with the icon picker
+* Fixed issues with the icon picker functionality.
 
 = 2.0 =
-* adds the shortcode [woousp] to display the USP table anywhere
-* tested with Gutenberg shortcode block
+* Introduced the [woousp] shortcode for displaying USPs anywhere on your site.
 
 = 1.1 =
-* adds 3 additional Icon Fonts to choose from: Dashicons, Font Awesom Icons, Linecons and Linearicons
+* Expanded icon selection with the addition of three new Icon Fonts: Dashicons, Font Awesome Icons, Linecons, and Linearicons.
 
 = 1.0 =
-* Initial version.
- 
+* Initial release.

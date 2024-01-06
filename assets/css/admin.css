@@ -1,0 +1,29 @@
+#wcusp_table {
+    width: 100%;
+    display: block;
+}
+
+#wcusp_table tbody {
+    display: block;
+    width: 100%;
+}
+
+#wcusp_table .flex-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#wcusp_table .flex-row>th,
+#wcusp_table .flex-row>td {
+    flex: 0 0 auto;
+}
+
+#wcusp_table .flex-row>td.full-width {
+    flex-grow: 1;
+}
+
+#wcusp_table .full-width-input {
+    width: 100%;
+    box-sizing: border-box;
+}
